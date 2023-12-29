@@ -1,0 +1,80 @@
+A feladat egy Forma-1 statisztika feldolgozása. A statisztika szezononként tartalmazza az egyes győztes versenyzőket, csapatokat. Egy-egy sor az alábbi felépítésből áll:
+
+szezon;győztes versenyző;győztes konstruktor;futamok száma;versenyzők száma;csapatok száma
+
+A feladat az f1racing.csv fájl beolvasása, eltárolása és az egyes statisztikai adatok lekérése.
+
+Mindemellett az IKT projektmunka is integrálva van a feladatba. Ez két apró feladatot tartalmaz:
+
+- Egy adatbázis normalizálása
+- A projekt GitHubon történő menedzselése
+
+Az egyes feladatoknál ezúttal be fog kerülni egy Commit és egy Push ajánlás is, érdemes ezeket figyelni.
+
+Megoldandó feladatok:
+
+0, Készítsen egy VisualStudio projektet F1Project_[Monogram] néven. A projekt egy egyszerű konzol alkalmazás legyen.
+
+1, Hozza létre a projektből a GitHub repository-t és töltse fel rá a jelenlegi fájlokat. Innentől az egyes Commitokat az egyes feladatok fogják tartalmazni.
+
+2, Törölje ki a meglévő Hello World kódot és helyére készítse el a struktúrát F1Racing néven. A struktúra 6 adattagot tartalmazzon, az alábbi nevekkel:
+ - seasonnum, ami egész szám típusú és a szezon évszámát tartalmazza
+ - winnerpilot, ami szöveg típusú és a szezon győztes versenyző nevét tartalmazza
+ - winnerteam, ami szöveg típusú és a szezon győztes konstruktőrét tartalmazza
+ - numofraces, ami egész szám típusú és a szezonban rendezett versenyek számát tartalmazza
+ - numofracers, ami egész szám típusú és a szezonban versenyzők számát tartalmazza
+ - numofteams, ami egész szám típusú és a szezonban jelen lévő csapatok számát tartalmazza
+
+Mindegyik adattag publikus legyen!
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Structure datatags defined
+
+Készítse el a konstruktorát a struktúrának. A konstruktor paraméterben egy stringet kap, melyben egy adatsor található pontosvesszőkkel elválasztva (lásd a leírás eleje), ezeket szétválasztja a konstruktor és beilleszti (ha szükséges konverziók után) a struktúra megfelelő adattagjaiba.
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Structure constructor defined
+
+3, Olvassa be a f1racing.csv fájl tartalmát egy string tömbbe és utána illessze be az egyes sorokat egy struktúra típusú tömbbe.
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: File read and stored
+
+4, Írja ki a képernyőre, hogy hány éve rendeznek Forma-1-es versenyeket.
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Number of races wrote out
+
+5, Készítsen metódust, ami paraméterben egy stringet kap és egy F1Racing típusú tömböt, majd visszaad egy számot, hogy a tömbben hányszos szerepel a winnerpilot adattagban a stringként kapott érték. Vagyis: A függvény visszaadja, hogy az adott versenyző hány szezont nyert meg.
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Function generated to define "number of wins of a racer"
+
+6, Kérjen be egy nevet a felhasználótól. Írja ki a függvény segítségével a program, hogy az adott versenyző hányszor nyert szezont. Ha ez az érték 0, akkor írja ki, hogy "A versenyző sosem nyert szezont!", különben írja ki, hogy "A versenyző X szezont nyert!", ahol X a nyert szezonok száma.
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Number of Wins of a Racer defined
+
+7, Írjon programot, ami kiírja, hogy melyik csapat nyert legtöbbször konstruktőri címet.
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Number of TeamWins defined
+
+8, Írjon programot, ami visszaadja az alábbi formátumban, hogy melyik szezonban volt a legtöbb versenyző a mezőnyben:
+"A legtöbb versenyző az alábbi szezonban volt pályán: X, abban az évben a győztes csapat: Y és a szezont Z nyerte!"
+
+Ezen a ponton készítsen egy Commitot az alábbi névvel: Most racers season defined
+
+9, Adottak az alábbi adatok:
+- versenyző id
+- versenyző neve
+- versenyző születési ideje
+- csapat id
+- csapat név
+- motorgyártó id
+- motorgyárta név
+- motorgyártó alapítás éve
+- verseny id
+- verseny neve
+- verseny országa
+- verseny városa
+- versenyző versenyen elért helyezése
+
+Készítsen ezekből az adatokból egy 3NF formába hozott adatbázist. Az adatbázis képét tegye be a projekt mappájába.
+Ezután meg fog jelenni a Visual Studioban az új fájl és Commitként fel tudja tölteni a GitHubra. A Commit neve az alábbi legyen: Database normalised
+
+10, Amennyiben elkészült minden feladattal, a végén egy Push művelettel töltse fel az elkészült projektet. Amennyiben több napon át készíti a feladatot, akkor érdemes az adott nap végén egy Push-t feltölteni, hogy könnyebb legyen visszaállni.
+
