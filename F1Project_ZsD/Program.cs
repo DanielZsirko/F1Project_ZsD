@@ -5,6 +5,10 @@ for (int i = 0; i < inputs.Length; i++)
 {
     racers[i] = new F1Racing(inputs[i]);
 }
+#region 4. feladat
+Console.WriteLine(inputs.Length + " éve rendeznek Forma-1-es versenyeket");
+#endregion
+
 struct F1Racing
 {
     public int seasonnum;
