@@ -1,4 +1,11 @@
-﻿struct F1Racing
+﻿string[] inputs = File.ReadAllLines("f1racing.csv");
+
+F1Racing[] racers = new F1Racing[inputs.Length];
+for (int i = 0; i < inputs.Length; i++)
+{
+    racers[i] = new F1Racing(inputs[i]);
+}
+struct F1Racing
 {
     public int seasonnum;
     public string winnerpilot;
