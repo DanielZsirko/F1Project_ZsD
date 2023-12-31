@@ -12,6 +12,20 @@ for (int i = 0; i < inputs.Length; i++)
 Console.WriteLine(inputs.Length + " éve rendeznek Forma-1-es versenyeket");
 #endregion
 
+#region 6. feladat
+Console.Write("Addjon meg egy nevet: ");
+string winnerpilotName = Console.ReadLine();
+int wins = F1Racing.WinnerPilot(racers, winnerpilotName);
+if (wins == 0)
+{
+    Console.WriteLine("A versenyző sosem nyert szezont!");
+}
+else
+{
+    Console.WriteLine($"A versenyző {wins} szezont nyert!");
+}
+#endregion
+
 struct F1Racing
 {
     public int seasonnum;
