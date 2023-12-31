@@ -1,4 +1,7 @@
-﻿string[] inputs = File.ReadAllLines("f1racing.csv");
+﻿using System.Linq;
+using Microsoft.VisualBasic;
+
+string[] inputs = File.ReadAllLines("f1racing.csv");
 
 F1Racing[] racers = new F1Racing[inputs.Length];
 for (int i = 0; i < inputs.Length; i++)
@@ -28,4 +31,20 @@ struct F1Racing
         this.numofracers = int.Parse(splitted[4]);
         this.numofteams = int.Parse(splitted[5]);
     }
+
+    #region 5. feladat
+    public static int WinnerPilot(F1Racing[] racers, string winnerpilotName)
+    {
+        int wins = 0;
+        for (int i = 0; i < racers.Length; i++)
+        {
+            if (racers[i].winnerpilot == winnerpilotName)
+            {
+                wins++;
+            }
+        }
+
+        return wins;
+    }
+    #endregion
 }
