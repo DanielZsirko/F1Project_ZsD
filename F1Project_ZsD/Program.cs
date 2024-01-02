@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
 using Microsoft.VisualBasic;
 
 string[] inputs = File.ReadAllLines("f1racing.csv");
@@ -24,6 +25,12 @@ else
 {
     Console.WriteLine($"A versenyző {wins} szezont nyert!");
 }
+#endregion
+
+#region 7. feladat
+List<string> winnerTeam2 = new List<string>();
+winnerTeam2.Add(racers[2].winnerteam);
+//Ezután meg akartam volna számolni, hogy a melyik elem (csapat) fordul elő a legtöbbször a listában.
 #endregion
 
 struct F1Racing
