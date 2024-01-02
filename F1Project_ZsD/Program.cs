@@ -28,9 +28,30 @@ else
 #endregion
 
 #region 7. feladat
-List<string> winnerTeam2 = new List<string>();
-winnerTeam2.Add(racers[2].winnerteam);
+List<string> winnerTeam = new List<string>();
+winnerTeam.Add(racers[2].winnerteam);
 //Ezután meg akartam volna számolni, hogy a melyik elem (csapat) fordul elő a legtöbbször a listában.
+#endregion
+
+#region 8. feladat
+int mostRacers = 0;
+int mostRacersYear = 0;
+string winnerTeamofSeason = "";
+string winner = "";
+
+for (int i = 0; i < racers.Length; i++)
+{
+    if (racers[i].numofracers > mostRacers)
+    {
+        mostRacers = racers[i].numofracers;
+        mostRacersYear = racers[i].seasonnum;
+        winnerTeamofSeason = racers[i].winnerteam;
+        winner = racers[i].winnerpilot;
+    }
+}
+
+Console.WriteLine($"A legtöbb versenyző az alábbi szezonban volt pályán: {mostRacersYear}, abban az évben a győztes csapat: " +
+    $"{winnerTeamofSeason} és a szezont {winner} nyerte!");
 #endregion
 
 struct F1Racing
